@@ -3,16 +3,16 @@
   color: rgb(238, 226, 226);
   text-align: center;
   padding: 20px;
-  display: flex; /* Use flexbox to align items */
-  flex-wrap: wrap; /* Wrap items to next line if they exceed container width */
-  justify-content: center; /* Center items horizontally */
+  display: flex; 
+  flex-wrap: wrap; 
+  justify-content: center;
 }
 
 .footer-section {
-  margin: 0 10px; /* Add margin between sections */
-  flex: 1; /* Each section takes equal space */
-  max-width: 300px; /* Limit maximum width of each section */
-  text-align: left; /* Align text to the left */
+  margin: 0 10px; 
+  flex: 1;
+  max-width: 300px;
+  text-align: left; 
 }
 
 .footer-section h3 {
@@ -22,7 +22,7 @@
 }
 
 .footer-section .content {
-  margin-bottom: 20px; /* Add space between header and content */
+  margin-bottom: 20px; 
 }
 
 
@@ -33,15 +33,15 @@
   color: rgb(170, 167, 167);
   text-align: center;
   padding: 20px;
-  display: flex; /* Use flexbox to align items */
-  flex-wrap: wrap; /* Wrap items to next line if they exceed container width */
-  justify-content: center; /* Center items horizontally */
+  display: flex; 
+  flex-wrap: wrap; 
+  justify-content: center; 
 }
 .footer-section {
-  margin: 0 10px; /* Add margin between sections */
-  flex: 1; /* Each section takes equal space */
-  max-width: 500px; /* Limit maximum width of each section */
-  text-align: center; /* Align text to the left */
+  margin: 0 10px; 
+  flex: 1; 
+  max-width: 500px; 
+  text-align: center; 
 }
 
 .footer-section h5 {
@@ -51,14 +51,14 @@
 }
 
 .footer-section .content {
-  margin-bottom: 20px; /* Add space between header and content */
+  margin-bottom: 20px;
 }
 
 
 .myfooter2 {
   background-color: rgb(0, 0, 0);
   color: rgb(238, 226, 226);
-  display: flex; /* Use flexbox to align items */
-  flex-wrap: wrap; /* Wrap items to next line if they exceed container width */
-  justify-content: center; /* Center items horizontally */
+  display: flex; 
+  flex-wrap: wrap; 
+  justify-content: center; 
 }

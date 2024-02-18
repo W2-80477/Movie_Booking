@@ -43,8 +43,8 @@
 }
 
 .card-img-top {
-  height: 400px; 
-  object-fit: cover;
+  height: 250px; 
+  object-fit: fill;
   border-radius: 10px 10px 0 0;
 }
 

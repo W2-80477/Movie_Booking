@@ -11,6 +11,14 @@ import 'react-toastify/dist/ReactToastify.css';
 import MovieDetails from './components/MovieDetails';
 import Theaters from './components/Theaters';
 
+
+
+import Seats from './components/seats/Seats';
+import Final from './components/seats/Final';
+
+import Profile from './components/user/Profile';
+import EditAccount from './components/user/EditAccount';
+
 function App() {
   return (
     <>
@@ -22,6 +30,11 @@ function App() {
           <Route path="/signin" element={<SignIn />} />
           <Route path="/moviedetails/:movie_id" element={<MovieDetails />} />
           <Route path='/theaters' element={<Theaters/>}/>
+          <Route path="/seats" element={<Seats />} />
+          <Route path="/Final/:selected/:totalprice" element={<Final />} />
+          <Route path='/user/:user_id' element = {<Profile/>}/>
+          <Route path='/editAccount' element = {<EditAccount/>}/>
+
         </Routes>
         <ToastContainer theme="dark" />
       </BrowserRouter>
