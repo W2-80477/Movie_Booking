@@ -2,7 +2,6 @@ const config=require('config');
 const mysql=require('mysql');
 const cors=require('cors');
 const express=require('express');
-const { error } = require('console');
 const app =  express.Router();
 
 
@@ -34,6 +33,25 @@ app.get("/",(req,res)=>{
         }
     })
 })
+app.get("/:user_id", (request, response) => {
+    const userid = request.params.user_id;
+    let connection = mysql.createConnection(connectionDetails);
+  
+    const statement = "SELECT * FROM users WHERE user_id = ?";
+  
+    connection.query(statement, [userid], (error, result) => {
+      if (error == null) {
+        response.setHeader("Content-Type", "application/json");
+        response.send(JSON.stringify(result));
+      } else {
+        response.setHeader("Content-Type", "application/json");
+        response.send(JSON.stringify(error));
+      }
+  
+      connection.end();
+    });
+  });
+
 
 app.post("/",(req,res) =>
 {

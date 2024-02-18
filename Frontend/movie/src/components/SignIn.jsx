@@ -41,7 +41,8 @@ const postData = () => {
         notifySuccess(data.message);
         console.log(data);
         localStorage.setItem("jwt", data.token);
-        navigate("/");
+        navigate("/")
+        // navigate(`/profile/${data.user_id}`);
       }
     })
     .catch(error => {

@@ -1,10 +1,12 @@
 import React,{useState} from 'react';
+import { useNavigate } from 'react-router-dom';
 import './theaters.css';
 
 function Theaters() {
 
     const [selectedDate, setSelectedDate] = useState(new Date());
     const [selectedTheater, setSelectedTheater] = useState(null);
+    const navigate = useNavigate();
 
     const theatersData = [
         {
@@ -64,8 +66,17 @@ function Theaters() {
 
       const handleDateChange = (date) => {
         setSelectedDate(date);
-        // You may want to fetch data for the selected date and theater here
       };
+
+
+      const handleTheaterClick = (theater) => {
+        setSelectedTheater(theater);
+    
+        // Navigate to the Seats component with theater information
+        // history.push('/seats', { theater });
+        navigate("/seats",{theater})
+      };
+
 
   return (
     <div className='theater'>
@@ -79,10 +90,10 @@ function Theaters() {
           {theatersData.map((theater) => (
             <div key={theater.id} className='mb-3'>
               <button
-                onClick={() => setSelectedTheater(theater)}
-                className={`btn ${selectedTheater === theater ? 'btn-primary' : 'btn-secondary'}`}
-                aria-label={`Select ${theater.name} theater`}
-              >
+          onClick={() => handleTheaterClick(theater)}
+          className={`btn ${selectedTheater === theater ? 'btn-primary' : 'btn-secondary'}`}
+          aria-label={`Select ${theater.name} theater`}
+        >
                 {theater.name}
               </button>
             </div>

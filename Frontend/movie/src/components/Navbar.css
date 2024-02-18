@@ -1,47 +1,90 @@
-/* Navbar Styles */
+
 .navbar {
-  background-color: #343a40; /* Navbar background color */
+  background-color: #343a40; 
 }
 
 .navbar-brand {
-  color: #ffffff; /* Navbar brand color */
+  color: #ffffff;
   font-weight: bold;
 }
 
 .navbar-brand:hover {
-  color: #ffffff; /* Navbar brand color on hover */
+  color: #ffffff; 
 }
 
 .navbar-toggler-icon {
-  background-color: #ffffff; /* Navbar toggle icon color */
+  background-color: #ffffff; 
 }
 
 .navbar-nav .nav-link {
-  color: #ffffff; /* Navbar link color */
+  color: #ffffff; 
   margin-right: 15px;
 }
 
 .navbar-nav .nav-link:hover {
-  color: #ffffff; /* Navbar link color on hover */
+  color: #ffffff; 
 }
 
-/* Active Link Style */
+
 .nav-item.active .nav-link {
-  color: #28a745; /* Active link color */
+  color: #28a745; 
 }
 
-/* Search Form Styling */
+
 .form-control {
   margin-right: 10px;
 }
 
 .btn-outline-success {
-  color: #28a745; /* Search button text color */
-  border-color: #28a745; /* Search button border color */
+  color: #28a745;
+  border-color: #28a745; 
 }
 
 .btn-outline-success:hover {
-  background-color: #28a745; /* Search button background color on hover */
-  color: #ffffff; /* Search button text color on hover */
-  border-color: #28a745; /* Search button border color on hover */
+  background-color: #28a745;
+  color: #ffffff; 
+  border-color: #28a745; 
 }
+/* Profile Picture */
+.profile-pic{
+  display: inline-block;
+  vertical-align: middle;
+   width: 50px;
+   height: 50px;
+   overflow: hidden;
+  border-radius: 50%;
+}
+
+.profile-pic img{
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+.profile-menu .dropdown-menu {
+ right: 0;
+ left: unset;
+}
+.profile-menu .fa-fw {
+ margin-right: 10px;
+}
+
+.toggle-change::after {
+ border-top: 0;
+ border-bottom: 0.3em solid;
+}
+.dropdown-item:hover {
+  background-color: #495057; 
+  color: #fff; 
+}
+
+.dropdown-menu li {
+  cursor: pointer;
+}
+
+
+.dropdown-menu li:hover {
+  background-color: #495057;
+  color: #fff; 
+}
+
+

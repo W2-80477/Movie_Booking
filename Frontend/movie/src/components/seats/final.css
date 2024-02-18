@@ -1,0 +1,23 @@
+.final {
+   
+    height: 100vh;
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(226, 92, 19);
+  }
+  .showe {
+    background-color: rgb(247, 124, 9);
+  
+    width: 350px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .img {
+    width: 80%;
+    height: 70%;
+  }
