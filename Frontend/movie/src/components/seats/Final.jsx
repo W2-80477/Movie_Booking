@@ -1,6 +1,7 @@
 import React from 'react'
 import { useParams } from 'react-router-dom';
 import "./final.css";
+import "../Image/scanner.png";
 
 function Final() {
     const { selected, totalprice } = useParams();
@@ -8,10 +9,10 @@ function Final() {
     <>
       <div className="final">
       <div className="showe">
-        <img src="https://th.bing.com/th/id/OIP.4z1OjfnzBBQdMFkv0NV7pgHaLH?pid=ImgDet&rs=1" className="img" alt="img not found"/>
+        <img src="scanner.png" className="img" alt="img not found"/>
         <h3>SELECTED SEATS</h3>
         {selected}
-        <h3>TOTALPRICE : {totalprice}</h3>
+        <h3>TOTALPRICE : Rs. {totalprice}</h3>
       </div>
     </div>
     </>

@@ -126,7 +126,7 @@ function Seats() {
       { id: 19, number: "G13" }
     ]
   ];
-  const price = 30;
+  const price = 100;
   const totalprice = price * selected.length;
   const addSeatCallback = ({ row, number, id }, addCb) => {
     setSelected((prevItems) => [...prevItems, number]);
@@ -146,7 +146,7 @@ function Seats() {
         <h3 className="screen">SCREEN</h3>
       </div>
 
-      <h5 className="seat_price">CLASSIC ₹300</h5>
+      <h5 className="seat_price">CLASSIC ₹100</h5>
       <SeatPicker
         addSeatCallback={addSeatCallback}
         removeSeatCallback={removeSeatCallback}
@@ -163,7 +163,7 @@ function Seats() {
             </div>
             <div className="totalprice">
               <h1 className="price">
-                price:{"$"}
+                price:{"Rs."}
                 {totalprice}
               </h1>
             </div>

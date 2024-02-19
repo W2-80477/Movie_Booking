@@ -10,7 +10,7 @@ function Navbar() {
 
   const handleItemClick = (item) => {
     if (item === 'profile') {
-      navigate("/user");
+      navigate("/profile");
     } else if (item === 'logout') {
       localStorage.removeItem('jwt');
       navigate("/signin");
@@ -29,7 +29,7 @@ function Navbar() {
           <div className="collapse navbar-collapse" id="navbarTogglerDemo03">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <Link className="nav-link active" aria-current="page" to="/home">Home</Link>
+                <Link className="nav-link active" aria-current="page" to="/">Home</Link>
               </li>
               <li className="nav-item">
                 <Link className="nav-link active" aria-current="page" to="/signup">SignUp</Link>
