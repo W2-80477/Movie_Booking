@@ -66,7 +66,6 @@ if(!emailRegex.test(email)){
     <div className='signup'>
     <div className='form-container'>
     <div className='form'>
-    {/* <img className='signuplogo' src={logo} alt='logo' /> */}
           <p className='para'> Registration Here</p>
           <div>
             <input type='text' name='fname' id='fname' placeholder='Enter Your First Name' value={fname} onChange={(e)=>{setFname(e.target.value)}} />

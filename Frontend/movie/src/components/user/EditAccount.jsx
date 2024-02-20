@@ -1,12 +1,12 @@
-
 import React from 'react';
+import "./editProfile.css";
 
 const EditAccount = () => {
   return (
     <div className="container mt-5">
       <div className="row">
         <div className="col-md-6 offset-md-3">
-          <div className="card">
+          <div className="card-edit">
             <div className="card-header">
               <h3>Profile</h3>
             </div>

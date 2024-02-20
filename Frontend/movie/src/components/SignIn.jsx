@@ -40,10 +40,12 @@ const postData = () => {
         notifyError(data.error);
       } else {
         notifySuccess(data.message);
-        console.log(data);
         localStorage.setItem("jwt", data.token);
-        // navigate("/")
-        navigate(`/profile/${data.user_id}`);
+        localStorage.setItem("userDetails", (data.user_id));
+        alert(data.user_id)
+        navigate("/")
+        // navigate(`/profile/${data.user_id}`)
+
       }
     })
     .catch(error => {

@@ -5,6 +5,10 @@
 #carouselExampleCaptions {
     margin-top: 1px;
   }
+
+  .editmovie {
+    margin-bottom: 80px;
+  }
   
   .carousel-inner img {
     height: 500px; 

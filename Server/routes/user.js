@@ -85,6 +85,28 @@ app.post("/",(req,res) =>
 }
 )
 
+app.put("/:user_id", (req, res) => {
+    const userid = req.params.user_id;
+    const { first_name, last_name, email_id, password, mob_no, date_of_birth } = req.body;
+  
+    let connection = mysql.createConnection(connectionDetails);
+    const statement = "UPDATE users SET first_name=?, last_name=?, email_id=?, password=?, mob_no=?, date_of_birth=? WHERE user_id=?";
+    
+    connection.query(statement, [first_name, last_name, email_id, password, mob_no, date_of_birth, userid], (error, result) => {
+      if (error == null) {
+        res.setHeader("Content-Type", "application/json");
+        const responseMsg = {
+          "status": "success",
+          "result": result,
+        };
+        res.send(JSON.stringify(responseMsg));
+      } else {
+        res.setHeader("Content-Type", "application/json");
+        res.send(JSON.stringify(error));
+      }
+      connection.end();
+    });
+  });
 
 
 module.exports =app;

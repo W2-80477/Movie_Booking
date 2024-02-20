@@ -1,19 +1,27 @@
 import React from 'react';
 import "./Navbar.css";
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate,useParams } from 'react-router-dom';
 import profile from "./Image/profile.jpeg"
 import logo from "./Image/MovieLogo.png";
 
 
 function Navbar() {
-
+  const { user_id } = useParams();
   const navigate = useNavigate();
 
   const handleItemClick = (item) => {
     if (item === 'profile') {
-      navigate("/profile");
+      const userDetails = JSON.parse(localStorage.getItem('userDetails'));
+      alert('userDetails:', userDetails);
+      if (userDetails) {
+        navigate(`/profile/${userDetails.user_id}`);
+      } else {
+
+        navigate('/signin');
+      }
     } else if (item === 'logout') {
       localStorage.removeItem('jwt');
+      localStorage.removeItem('userDetails');
       navigate("/signin");
     }
   };
@@ -35,7 +43,7 @@ function Navbar() {
                 <Link className="nav-link active" aria-current="page" to="/">Home</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link active" aria-current="page" to="/signup">SignUp</Link>
+                <Link className="nav-link active" aria-current="page" to="/adminhome">Admin</Link>
               </li>
               <li className="nav-item">
                 <Link className="nav-link active" aria-current="page" to="/signin">SignIn</Link>
@@ -56,7 +64,9 @@ function Navbar() {
                    
                   </a>
                   <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li onClick={() => handleItemClick('profile')}><i className="fas fa-sliders-h fa-fw"></i>Profile</li>
+                  <li onClick={() => handleItemClick('profile')}>
+                  <i className="fas fa-sign-out-alt fa-fw"></i>Profile
+                </li>
                 <li><hr className="dropdown-divider" /></li>
                 <li onClick={() => handleItemClick('logout')}><i className="fas fa-sign-out-alt fa-fw"></i> Log Out</li>
               </ul>
