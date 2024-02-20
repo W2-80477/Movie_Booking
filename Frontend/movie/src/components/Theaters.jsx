@@ -71,9 +71,7 @@ function Theaters() {
 
       const handleTheaterClick = (theater) => {
         setSelectedTheater(theater);
-    
-        // Navigate to the Seats component with theater information
-        // history.push('/seats', { theater });
+  
         navigate("/seats",{theater})
       };
 

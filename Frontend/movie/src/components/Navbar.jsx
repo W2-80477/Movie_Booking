@@ -11,10 +11,10 @@ function Navbar() {
 
   const handleItemClick = (item) => {
     if (item === 'profile') {
-      const userDetails = JSON.parse(localStorage.getItem('userDetails'));
-      alert('userDetails:', userDetails);
-      if (userDetails) {
-        navigate(`/profile/${userDetails.user_id}`);
+      const userDetailsString = localStorage.getItem("userDetails");
+      const userDetails = userDetailsString ? JSON.parse(userDetailsString) : null;
+      if (userDetails != null) {
+        navigate(`/profile/${userDetails}`);
       } else {
 
         navigate('/signin');
