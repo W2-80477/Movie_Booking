@@ -11,13 +11,14 @@ import 'react-toastify/dist/ReactToastify.css';
 import MovieDetails from './components/MovieDetails';
 import Theaters from './components/Theaters';
 
-
-
 import Seats from './components/seats/Seats';
 import Final from './components/seats/Final';
 
 import Profile from './components/user/Profile';
 import EditAccount from './components/user/EditAccount';
+
+// import AddMovie from './components/admin/AddMovie';
+// import HomeAdmin from './components/admin/AdminHome';
 
 function App() {
   return (
@@ -34,7 +35,8 @@ function App() {
           <Route path="/Final/:selected/:totalprice" element={<Final />} />
           <Route path='/profile/:user_id' element = {<Profile/>}/>
           <Route path='/editAccount' element = {<EditAccount/>}/>
-
+          {/* <Route path='/adminhome' element={<HomeAdmin/>}/>
+          <Route path='/addmovie' element={<AddMovie/>}/> */}
         </Routes>
         <ToastContainer theme="dark" />
       </BrowserRouter>

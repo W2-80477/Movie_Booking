@@ -1,9 +1,9 @@
 import React,{useState,useEffect} from 'react'
 import { Link } from 'react-router-dom'; 
 import "./home.css";
-import landscapeAnimal from "./Image/landscapeAnimal.jpeg";
-import landscapeHanuman from "./Image/landscapeHanuman.jpeg";
-import landscapeSalaar from "./Image/landscapeSalaar.jpeg";
+import AnimalLandscape from "./Image/AnimalLandscape.jpg";
+import HanumanLandscape from "./Image/HanumanLandscape.jpg";
+import SalaarLandscape from "./Image/SalaarLandscape.jpg";
 
 function Home() {
   const [movies, setMovies] = useState([]);
@@ -33,21 +33,21 @@ function Home() {
         </div>
         <div className="carousel-inner">
           <div className="carousel-item active">
-            <img src={landscapeAnimal} className="d-block w-100" alt="animal" />
+            <img src={AnimalLandscape} className="d-block w-100" alt="animal" />
             <div className="carousel-caption d-none d-md-block">
               {/* <h5>First slide label</h5>
               <p>Some representative placeholder content for the second slide.</p> */}
             </div>
           </div>
           <div className="carousel-item">
-            <img src={landscapeHanuman} className="d-block w-100" alt="landscapeHanuman" />
+            <img src={HanumanLandscape} className="d-block w-100" alt="landscapeHanuman" />
             <div className="carousel-caption d-none d-md-block">
               {/* <h5>Second slide label</h5>
               <p>Some representative placeholder content for the second slide.</p> */}
             </div>
           </div>
           <div className="carousel-item">
-            <img src={landscapeSalaar} className="d-block w-100" alt="landscapeSalaar" />
+            <img src={SalaarLandscape} className="d-block w-100" alt="landscapeSalaar" />
             <div className="carousel-caption d-none d-md-block">
               {/* <h5>Third slide label</h5>
               <p>Some representative placeholder content for the third slide.</p> */}
@@ -64,7 +64,9 @@ function Home() {
           <div className="card card-with-fixed-height">
             <img src={movie.image} className="card-img-top" alt={movie.title} />
             <div className="card-body">
-              <h5 className="card-title">{movie.title}</h5>             
+              <center>
+              <h5 className="card-title">{movie.title}</h5> 
+              </center>            
             </div>
           </div>
           </Link>

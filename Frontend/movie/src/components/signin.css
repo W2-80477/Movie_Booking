@@ -3,7 +3,7 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: rgb(226, 92, 19);
+    background-color: antiquewhite 
   }
   
   .from-container {
@@ -44,5 +44,5 @@
     text-align: center;
   }
   
-  /* Add any additional styling as needed */
+  
   

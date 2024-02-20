@@ -1,18 +1,18 @@
 .home{
-  background-color: rgb(226, 92, 19); /* Change background color to yellow */
+  background-color: antiquewhite 
 }
-/* Carousel Styles */
+
 #carouselExampleCaptions {
     margin-top: 1px;
   }
   
   .carousel-inner img {
-    height: 500px; /* Adjust the height as needed */
+    height: 500px; 
     object-fit: cover;
   }
   
   .carousel-caption {
-    background: rgba(0, 0, 0, 0.7); /* Semi-transparent background for captions */
+    background: rgba(0, 0, 0, 0.7); 
     padding: 20px;
     border-radius: 5px;
   }
@@ -27,19 +27,17 @@
     color: #ddd;
   }
   
- /* Include the enhanced CSS code provided earlier */
-
-/* Additional styles for the cards */
+ 
 .card {
   margin-top: 4px;
-  background-color: #f6e743;
+  background-color:rgb(249, 205, 125);
   border: 1px solid #0e0d0d;
   transition: transform 0.3s ease;
   margin-bottom: 5px;
 }
 
 .card:hover {
-  transform: scale(1.05); /* Zoom in effect on hover */
+  transform: scale(1.05); 
 }
 
 .card-img-top {
@@ -63,14 +61,14 @@
   font-size: 0.9rem;
 }
 
-/* Ensure all cards are in one row */
+
 .row-cols-1.row-cols-md-4 {
   flex-wrap: nowrap;
   overflow: auto;
   white-space: nowrap;
 }
 
-/* Optional: Add a subtle border to the cards */
+
 .card {
   border: 1px solid #ddd;
 }
@@ -78,4 +76,21 @@
 .card-with-fixed-height {
   height: 300px;
   
+}
+
+.card {
+  border: 1px solid #ced4da;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  height: 434px;
+  width: 347px;
+  margin: auto;
+  display: in;
+}
+
+.card-img-top {
+  height: 374px;
+  object-fit: fill;
+  border-radius: 10px 10px 0 0;
 }

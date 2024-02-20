@@ -87,4 +87,42 @@
   color: #fff; 
 }
 
+/* Navbar.css */
+.logo {
+  width: 72px;
+  height: 55px;
+  margin-right: 10px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 10px;
+  margin: 8px;
+}
+
+card-img-top {
+  height: 250px;
+  margin-left: 2px;
+  object-fit: fill;
+  border-radius: 10px 10px 0 0;
+}
+.card-img {
+  height: 250px;
+  object-fit: none;
+  width: 398px;
+  border-radius: 5px 5px 5px 5px;
+}
+
+/* .card {
+  border: 1px solid #ced4da;
+  border-radius: 8px;
+  overflow: -moz-hidden-unscrollable;
+  padding: 7px;
+  height: 500px;
+  width: 419px;
+  margin-bottom: 8px;
+} */
+
+
 

@@ -2,7 +2,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(226, 92, 19);
+    background-color: antiquewhite;
     padding: 17.5px;
 }
 .theaters-container {
@@ -72,10 +72,10 @@
     margin-bottom: 1rem;
   }
   
-  /* Customize your date picker styles if needed */
+  
   .react-datepicker {
     font-family: 'Arial', sans-serif;
   }
   
-  /* Add more styles as needed for your specific design */
+  
   

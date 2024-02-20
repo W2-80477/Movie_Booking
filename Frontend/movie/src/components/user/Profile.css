@@ -1,5 +1,5 @@
 body{
-    background-color: rgb(226, 92, 19);
+  background-color: antiquewhite 
 }
 .user-details {
     padding: 20px;
@@ -16,3 +16,23 @@ body{
   .bold-text {
     font-weight: bold;
   }
+
+
+
+/* .card {
+    border: 1px solid #ced4da;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    width: 563px;
+    height: 521px;
+} */
+
+/* .card {
+  border: 1px solid #ced4da;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  width: 563px;
+  height: 736px;
+} */

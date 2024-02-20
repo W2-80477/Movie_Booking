@@ -3,15 +3,15 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: rgb(226, 92, 19); /* Change background color to yellow */
-  }
+    background-color: antiquewhite 
+    }
   
   .form-container {
     background-color: #f1a307;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    color: black; /* Set text color to black */
+    color: black; 
   }
   
   .input-container {
@@ -51,7 +51,7 @@
     text-align: center;
   }
   
-  /* Responsive styling */
+  
   @media (max-width: 600px) {
     .form-container {
       width: 80%;
