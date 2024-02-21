@@ -2,7 +2,7 @@ import React from 'react';
 import "./Navbar.css";
 import { Link, useNavigate,useParams } from 'react-router-dom';
 import profile from "./Image/profile.jpeg"
-import logo from "./Image/MovieLogo.png";
+import applogo from "./Image/applogo.jpeg";
 
 
 function Navbar() {
@@ -35,15 +35,12 @@ function Navbar() {
             <span className="navbar-toggler-icon"></span>
           </button>
           <a className="navbar-brand" href="#">
-            <img src={logo} alt="Logo" className="logo" />
+            <img src={applogo} alt="Logo" className="logo" />
           </a>
           <div className="collapse navbar-collapse" id="navbarTogglerDemo03">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
                 <Link className="nav-link active" aria-current="page" to="/">Home</Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link active" aria-current="page" to="/adminhome">Admin</Link>
               </li>
               <li className="nav-item">
                 <Link className="nav-link active" aria-current="page" to="/signin">SignIn</Link>

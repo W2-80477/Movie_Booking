@@ -79,7 +79,7 @@ const EditAccount = () => {
                 <input type="text" id="username" className="form-control" value={user.password} onChange={(e) => setUser({ ...user, password: e.target.value })} />
               </div>
               
-              <button className="btn btn-primary" onClick={handleUpdateProfile}>Update Profile</button>
+              <button className="btn btn-success" onClick={handleUpdateProfile}>Update Profile</button>
             </div>
           </div>
         </div>

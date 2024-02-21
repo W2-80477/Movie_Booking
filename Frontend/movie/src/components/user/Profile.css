@@ -3,6 +3,7 @@ body{
 }
 .user-details {
     padding: 20px;
+    text-align: left;
   }
   
   .user-details h2 {
@@ -21,7 +22,7 @@ body{
     border-radius: 8px;
     overflow: hidden;
     margin-bottom: 20px;
-    width: 563px;
+    width: 552px;
     height: 521px;
     background-color: rgb(249, 213, 168);
   }

@@ -19,6 +19,7 @@ import EditAccount from './components/user/EditAccount';
 
 // import AddMovie from './components/admin/AddMovie';
 // import HomeAdmin from './components/admin/AdminHome';
+// import EditMovie from './components/admin/EditMovie';
 
 function App() {
   return (
@@ -35,8 +36,9 @@ function App() {
           <Route path="/Final/:selected/:totalprice" element={<Final />} />
           <Route path='/profile/:user_id' element = {<Profile/>}/>
           <Route path='/editAccount/:user_id' element = {<EditAccount/>}/>
-          {/* <Route path='/adminhome' element={<HomeAdmin/>}/>
-          <Route path='/addmovie' element={<AddMovie/>}/> */}
+          {/* <Route path='/adminhome' element={<HomeAdmin/>}/> */}
+          {/* <Route path='/addmovie' element={<AddMovie/>}/> */}
+          {/* <Route path='/editmovie/:movie_id' element={<EditMovie/>}/> */}
         </Routes>
         <ToastContainer theme="dark" />
       </BrowserRouter>

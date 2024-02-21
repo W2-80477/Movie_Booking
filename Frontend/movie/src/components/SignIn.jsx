@@ -15,6 +15,42 @@ const notifyError=(msg)=>toast.error(msg);
 const notifySuccess=(msg)=>toast.success(msg);
 
 
+// const postData = () => {
+//   fetch("http://localhost:4000/login", {
+//     method: "post",
+//     headers: {
+//       "Content-Type": "application/json"
+//     },
+//     body: JSON.stringify({
+//       email: email,
+//       password: password
+//     })
+//   })
+//     .then(res => {
+//       if (!res.ok) {
+//         throw new Error(`HTTP error! Status: ${res.status}`);
+//       }
+//       return res.json();
+//     })
+//     .then(data => {
+//       console.log(data);
+
+//       if (data.error) {
+//         notifyError(data.error);
+//       } else {
+//         notifySuccess(data.message);
+//         localStorage.setItem("jwt", data.token);
+//         localStorage.setItem("userDetails", (data.user_id));
+//         navigate("/")
+
+//       }
+//     })
+//     .catch(error => {
+//       console.error("Error during fetch:", error);
+//       notifyError("An error occurred during the login process.");
+//     });
+// };
+
 const postData = () => {
   fetch("http://localhost:4000/login", {
     method: "post",
@@ -39,10 +75,16 @@ const postData = () => {
         notifyError(data.error);
       } else {
         notifySuccess(data.message);
-        localStorage.setItem("jwt", data.token);
-        localStorage.setItem("userDetails", (data.user_id));
-        navigate("/")
 
+        if (data.role === 'ADMIN') {
+          localStorage.setItem("adminToken", data.token);
+          localStorage.setItem("userDetails", (data.user_id));
+          navigate('/adminhome');
+        } else {
+          localStorage.setItem("userToken", data.token);
+          localStorage.setItem("userDetails", (data.user_id));
+          navigate('/');
+        }
       }
     })
     .catch(error => {
@@ -50,7 +92,6 @@ const postData = () => {
       notifyError("An error occurred during the login process.");
     });
 };
-
 
 
   return (

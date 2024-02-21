@@ -53,37 +53,53 @@ app.get("/:user_id", (request, response) => {
   });
 
 
-app.post("/",(req,res) =>
-{
-    let {first_name,last_name, email_id, password, mob_no, date_of_birth} = req.body;
+app.post('/', (req, res) => {
+  const { email, password } = req.body;
 
-    let connection=mysql.createConnection(connectionDetails);
-    let statement = `insert into users(first_name,last_name,email_id,password,mob_no,date_of_birth) values ('${first_name}','${last_name}','${email_id}','${password}','${mob_no}','${date_of_birth}')`;
-    connection.query(statement,(error,result)=>
-    {
-        if(error==null)
-        {
-            res.setHeader("Content-Type","application/json");
-            var responseMsg = {
-                "status" : "success",
-                "result" : result
-            }
-            res.write(JSON.stringify(responseMsg));
-            connection.end();
-            res.end();
-        }
-        else
-        {
-            res.setHeader("Content-Type","application/json");
-            res.write(JSON.stringify(error));
-            console.log(error);
-            connection.end();
-            res.end();
-        }
-    }
-    )
-}
-)
+  connectionDetails.query(
+      'SELECT user_id, first_name, last_name, role FROM users WHERE email_id = ? AND password = ?',
+      [email, password],
+      (err, results) => {
+          if (err) {
+              console.error(err);
+              res.status(500).send('Internal Server Error');
+              return;
+          }
+
+          if (results.length === 1) {
+              const user = results[0];
+
+              if (user.role === 'USER') {
+                  // Generate a JWT token
+                  const token = jwt.sign({ user_id: user.user_id, role: user.role }, config.get('jwtSecret'), {
+                      expiresIn: '1h'  // Token expiration time, adjust as needed
+                  });
+
+                  // Return user details and token upon successful login
+                  res.status(200).json({
+                      user_id: user.user_id,
+                      first_name: user.first_name,
+                      last_name: user.last_name,
+                      role: user.role,
+                      token: token
+                  });
+              } else if (user.role === 'ADMIN') {
+                  res.status(200).json({
+                      user_id: user.user_id,
+                      first_name: user.first_name,
+                      last_name: user.last_name,
+                      role: user.role
+                      // token: token
+                  });
+              } else {
+                  // Incorrect credentials
+                  res.status(401).send('Invalid email or password');
+              }
+          }
+      }
+  );
+});
+
 
 app.put("/:user_id", (req, res) => {
   const userid = req.params.user_id;
