@@ -1,9 +1,10 @@
 import React,{useState,useEffect} from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams,useNavigate } from 'react-router-dom';
 import "./editProfile.css";
 
 const EditAccount = () => {
   const { user_id } = useParams();
+  const navigate=  useNavigate();
   const [user, setUser] = useState({
     first_name: "",
     last_name: "",
@@ -44,6 +45,7 @@ const EditAccount = () => {
       })
       .then(data => {
         console.log('User details updated successfully:', data);
+        navigate(`/profile/${user_id}`);
        
       })
       .catch(error => console.error('Error updating user details:', error));
@@ -67,37 +69,14 @@ const EditAccount = () => {
                 <label htmlFor="last_name" className="form-label">Last Name:</label>
                 <input type="text" id="username" className="form-control" value={user.last_name} onChange={(e) => setUser({ ...user, last_name: e.target.value })} />
               </div>
-             
-              {/* <div className="mb-3">
-                <label htmlFor="date_of_birth" className="form-label">Date of Birth:</label>
-                <div className="d-flex">
-                  <select className="form-select mr-2" aria-label="Day">
-                    <option selected>Day</option>
-                    
-                    {Array.from({ length: 31 }, (_, i) => i + 1).map(day => (
-                      <option key={day} value={day}>{day}</option>
-                    ))}
-                  </select>
-                  <select className="form-select mr-2" aria-label="Month">
-                    <option selected>Month</option>
-                    
-                    <option value="January">January</option>
-                    <option value="February">February</option>
-                   
-                  </select>
-                  <select className="form-select" aria-label="Year">
-                    <option selected>Year</option>
-                  
-                    {Array.from({ length: 100 }, (_, i) => new Date().getFullYear() - i).map(year => (
-                      <option key={year} value={year}>{year}</option>
-                    ))}
-                  </select>
-                </div>
-              </div> */}
 
               <div className="mb-3">
                 <label htmlFor="mob_no" className="form-label">Mobile no:</label>
                 <input type="phone" id="username" className="form-control" value={user.mob_no} onChange={(e) => setUser({ ...user, mob_no: e.target.value })} />
+              </div>
+              <div className="mb-3">
+                <label htmlFor="mob_no" className="form-label">Password:</label>
+                <input type="text" id="username" className="form-control" value={user.password} onChange={(e) => setUser({ ...user, password: e.target.value })} />
               </div>
               
               <button className="btn btn-primary" onClick={handleUpdateProfile}>Update Profile</button>
