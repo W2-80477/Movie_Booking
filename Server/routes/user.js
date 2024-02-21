@@ -87,23 +87,28 @@ app.post("/",(req,res) =>
 
 app.put("/:user_id", (req, res) => {
   const userid = req.params.user_id;
-  const { first_name, last_name, email_id, password, mob_no, date_of_birth } = req.body;
+const { first_name, last_name, email_id, password, mob_no, date_of_birth } = req.body;
 
-  console.log('Received update request for user:', req.body);
 
-  let connection = mysql.createConnection(connectionDetails);
-  const statement = "UPDATE users SET first_name=?, last_name=?, email_id=?, password=?, mob_no=?, date_of_birth=? WHERE user_id=?";
-  
-  connection.query(statement, [first_name, last_name, email_id, password, mob_no, date_of_birth, userid], (error, result) => {
-    if (error) {
-      console.error('Error updating user details:', error);
-      res.status(500).json({ status: 'error', message: 'Error updating user details' });
-    } else {
-      console.log('User details updated successfully:', result);
-      res.status(200).json({ status: 'success', message: 'User details updated successfully' });
-    }
-    connection.end();
-  });
+const formattedDateOfBirth = date_of_birth ? date_of_birth.substring(0, 10) : null;
+
+// console.log('Received update request for user:', req.body);
+
+let connection = mysql.createConnection(connectionDetails);
+const statement = "UPDATE users SET first_name=?, last_name=?, email_id=?, password=?, mob_no=?, date_of_birth=? WHERE user_id=?";
+
+connection.query(statement, [first_name, last_name, email_id, password, mob_no, formattedDateOfBirth, userid], (error, results) => {
+  if (error) {
+    console.error('Error updating user details:', error);
+    res.status(500).json({ error: 'Internal Server Error' });
+  } else {
+    // console.log('User details updated successfully:', results);
+    res.json({ success: true, message: 'User details updated successfully' });
+  }
+
+  connection.end();
+});
+
 });
 
 

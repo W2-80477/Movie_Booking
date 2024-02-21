@@ -40,7 +40,7 @@ const Profile = () => {
           <p><strong>First Name :</strong> {user.first_name}</p>
           <p><strong>Last Name :</strong> {user.last_name} </p>
           <p><strong>Email :</strong> {user.email_id}</p>
-          <p><strong>Date of Birth :</strong> {user.date_of_birth}</p>
+          <p><strong>Date of Birth :</strong> {user.date_of_birth ? new Date(user.date_of_birth).toLocaleDateString('en-CA') : null}</p>
           <p><strong>Mobile no :</strong> {user.mob_no}</p>
           <p><strong>Role :</strong> {user.role}</p>
         </div>
