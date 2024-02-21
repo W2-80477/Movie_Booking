@@ -5,18 +5,13 @@
 #carouselExampleCaptions {
     margin-top: 1px;
   }
-
-  .editmovie {
-    margin-bottom: 80px;
-  }
   
   .carousel-inner img {
     height: 500px; 
     object-fit: cover;
   }
   
-  .carousel-caption {
-    background: rgba(0, 0, 0, 0.7); 
+  .carousel-caption { 
     padding: 20px;
     border-radius: 5px;
   }
@@ -34,7 +29,7 @@
  
 .card {
   margin-top: 4px;
-  background-color:rgb(249, 205, 125);
+  background-color:rgb(249, 213, 168);
   border: 1px solid #0e0d0d;
   transition: transform 0.3s ease;
   margin-bottom: 5px;
@@ -98,3 +93,4 @@
   object-fit: fill;
   border-radius: 10px 10px 0 0;
 }
+

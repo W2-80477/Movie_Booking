@@ -30,7 +30,7 @@ const Profile = () => {
     <div className="container mt-5">
       <div className="row">
         <div className="col-md-6 offset-md-3">
-          <div className="card">
+        <div className="card profile-card">
             <div className="card-header">
               <h3>User Profile</h3>
             </div>
@@ -47,8 +47,8 @@ const Profile = () => {
 
               <div className='loginform'>
             want to Update  ?
-            <Link to='/editAccount'>
-              <span style={{color: "red", cursor:"pointer"}} >Edit Profile</span>
+            <Link to={`/editAccount/${user.user_id}`}>
+              <span style={{color: "blue", cursor:"pointer"}} >Edit Profile</span>
             </Link>
             </div>
 

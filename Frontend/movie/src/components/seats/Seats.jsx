@@ -141,6 +141,7 @@ function Seats() {
 
   return (
     <>
+    <div className='allScreen'>
         <div className="seats">
       <div className="screens">
         <h3 className="screen">SCREEN</h3>
@@ -176,6 +177,7 @@ function Seats() {
           </button>
         </>
       ) : null}
+    </div>
     </div>
     </>
   )

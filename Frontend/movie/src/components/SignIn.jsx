@@ -42,9 +42,7 @@ const postData = () => {
         notifySuccess(data.message);
         localStorage.setItem("jwt", data.token);
         localStorage.setItem("userDetails", (data.user_id));
-        alert(data.user_id)
         navigate("/")
-        // navigate(`/profile/${data.user_id}`)
 
       }
     })
@@ -86,7 +84,7 @@ const postData = () => {
           <div className='loginform'>
             Don't have account ?
             <Link to='/signup'>
-              <span style={{color: "red", cursor:"pointer"}}> SignUp</span>
+              <span style={{color: "blue", cursor:"pointer"}}> SignUp</span>
             </Link>
 
           </div>

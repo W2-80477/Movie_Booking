@@ -34,7 +34,7 @@ function App() {
           <Route path="/seats" element={<Seats />} />
           <Route path="/Final/:selected/:totalprice" element={<Final />} />
           <Route path='/profile/:user_id' element = {<Profile/>}/>
-          <Route path='/editAccount' element = {<EditAccount/>}/>
+          <Route path='/editAccount/:user_id' element = {<EditAccount/>}/>
           {/* <Route path='/adminhome' element={<HomeAdmin/>}/>
           <Route path='/addmovie' element={<AddMovie/>}/> */}
         </Routes>

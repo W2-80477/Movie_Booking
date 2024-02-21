@@ -1,4 +1,41 @@
-/* .card {
-    margin-top: 20px;
-    height: 745px;
-} */
+/* editProfile.css */
+
+body {
+    background-color: antiquewhite;
+  }
+  
+  .edit-account-card {
+    border: 1px solid #ced4da;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    width: 563px;
+    height: auto; /* Adjust the height based on your design */
+    background-color: rgb(249, 213, 168);
+  }
+  
+  .form-label {
+    color: #333; /* Customize label color */
+  }
+  
+  .form-control {
+    color: #666; /* Customize input text color */
+  }
+  
+  .btn-primary {
+    background-color: #007bff; /* Customize button color */
+    color: #fff; /* Customize button text color */
+  }
+  
+  /* Any other specific styles for the EditAccount component can be added here */
+
+  .card-header{
+    text-align: center;
+  }
+
+  .card-body{
+    text-align: center;
+  }
+
+  
+  
