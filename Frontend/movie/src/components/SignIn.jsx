@@ -10,7 +10,6 @@ function SignIn() {
 const navigate = useNavigate();
 const [email, setEmail] = useState("");
 const [password, setPassword] = useState("");
-// this is the chnage 
 
 const notifyError=(msg)=>toast.error(msg);
 const notifySuccess=(msg)=>toast.success(msg);

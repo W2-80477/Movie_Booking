@@ -29,12 +29,12 @@ app.post('/', (req, res) => {
             if (results.length === 1) {
                 const user = results[0];
 
-                // Generate a JWT token
+               
                 const token = jwt.sign({ user_id: user.user_id, role: user.role }, config.get('jwtSecret'), {
-                    expiresIn: '1h'  // Token expiration time, adjust as needed
+                    expiresIn: '1h' 
                 });
 
-                // Return user details and token upon successful login
+               
                 res.status(200).json({
                     user_id: user.user_id,
                     first_name: user.first_name,
@@ -43,7 +43,6 @@ app.post('/', (req, res) => {
                     token: token
                 });
             } else {
-                // Incorrect credentials
                 res.status(401).send('Invalid email or password');
             }
         }

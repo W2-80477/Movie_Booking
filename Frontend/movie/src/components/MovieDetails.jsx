@@ -30,24 +30,22 @@ function MovieDetails() {
   }, [movie_id]);
 
   
-  // const handleBookNow = () => {
-  //   if (!isAuthenticated) {
-  //     navigate('/signin'); 
-  //   } else {
-  //     navigate('/theaters');
-  //   }
-  // };
+  const handleBookNow = () => {
+    const storedUserDetails = localStorage.getItem("userDetails");
+
+    if (!isAuthenticated && !storedUserDetails) {
+      navigate('/signin');
+    } else {
+      navigate('/theaters');
+    }
+  };
+
+
 
   if (!movie) {
 
     return <div>Loading...</div>;
   }
- 
- const handleBookNow =()=>{
-    navigate("/theaters")
- }
-
-
 
   return (
     <div className='moviedetails'>
@@ -72,7 +70,7 @@ function MovieDetails() {
               <p>Language: {movie.language}</p>
               <p>Release Date: {movie.release_date}</p>
 
-              <button className="btn btn-success " onClick={handleBookNow}>Book Now</button>
+              <button className="btn btn-success" onClick={handleBookNow}>Book Now</button>
             </div>
           </div>
         </div>

@@ -101,7 +101,7 @@ app.put("/:show_id", (request, response)=>{
 app.delete("/:show_id", (request, response)=>{
     var connection = mysql.createConnection(connectionDetails);
 
-    var id = request.params.show_id;//This data belongs to header part 
+    var id = request.params.show_id;
   
     var statement = 
         `delete from shows where show_id =${id}`;

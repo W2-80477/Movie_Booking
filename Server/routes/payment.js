@@ -63,7 +63,7 @@ app.post("/", (request, response)=>{
 app.delete("/:payment_id", (request, response)=>{
     let connection = mysql.createConnection(connectionDetails);
 
-    let id = request.params.payment_id;//This data belongs to header part 
+    let id = request.params.payment_id;rt 
   
     let statement = 
         `delete from payment where payment_id =${id}`;

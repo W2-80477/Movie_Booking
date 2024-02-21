@@ -106,7 +106,7 @@ app.put("/:show_seat_id", (request, response)=>{
 app.delete("/:show_seat_id", (request, response)=>{
     var connection = mysql.createConnection(connectionDetails);
 
-    var id = request.params.show_seat_id;//This data belongs to header part 
+    var id = request.params.show_seat_id;
   
     var statement = 
         `delete from show_seat where show_seat_id =${id}`;
