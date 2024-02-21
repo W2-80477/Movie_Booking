@@ -1,46 +1,46 @@
-.home{
-  background-color: antiquewhite 
+.home {
+  background-color: antiquewhite
 }
 
 #carouselExampleCaptions {
-    margin-top: 1px;
-  }
-  
-  .carousel-inner img {
-    height: 500px; 
-    object-fit: cover;
-  }
-  
-  .carousel-caption { 
-    padding: 20px;
-    border-radius: 5px;
-  }
-  
-  .carousel-caption h5 {
-    color: #fff;
-    font-size: 2rem;
-    margin-bottom: 10px;
-  }
-  
-  .carousel-caption p {
-    color: #ddd;
-  }
-  
- 
+  margin-top: 1px;
+}
+
+.carousel-inner img {
+  height: 500px;
+  object-fit: cover;
+}
+
+.carousel-caption {
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.carousel-caption h5 {
+  color: #fff;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.carousel-caption p {
+  color: #ddd;
+}
+
+
 .card {
   margin-top: 4px;
-  background-color:rgb(249, 213, 168);
+  background-color: rgb(249, 213, 168);
   border: 1px solid #0e0d0d;
   transition: transform 0.3s ease;
   margin-bottom: 5px;
 }
 
 .card:hover {
-  transform: scale(1.05); 
+  transform: scale(1.05);
 }
 
 .card-img-top {
-  height: 250px; 
+  height: 250px;
   object-fit: fill;
   border-radius: 10px 10px 0 0;
 }
@@ -74,7 +74,7 @@
 
 .card-with-fixed-height {
   height: 300px;
-  
+
 }
 
 .card {
@@ -88,9 +88,9 @@
   display: in;
 }
 
+
 .card-img-top {
-  height: 374px;
+  height: 370px;
   object-fit: fill;
   border-radius: 10px 10px 0 0;
 }
-

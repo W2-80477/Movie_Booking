@@ -65,7 +65,8 @@ function Home() {
             <img src={movie.image} className="card-img-top" alt={movie.title} />
             <div className="card-body">
               <center>
-              <h5 className="card-title">{movie.title}</h5> 
+              <h5 className="card-title">{movie.title}</h5>
+              <p>Language: {movie.language}</p> 
               </center>            
             </div>
           </div>

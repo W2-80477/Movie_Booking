@@ -46,3 +46,11 @@
 .add-movie-button:hover {
   background-color: #0056b3;
 }
+
+.add-movie-card{
+  width: 500px;
+}
+
+.add-movie-button{
+  margin-left: 160px;
+}

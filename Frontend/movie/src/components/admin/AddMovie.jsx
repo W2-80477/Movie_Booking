@@ -30,11 +30,11 @@ function AddMovie() {
         },
         body: JSON.stringify(newMovie),
       });
-  
+
       if (!response.ok) {
         throw new Error(`HTTP error! Status: ${response.status}`);
       }
-  
+
       const responseData = await response.json();
       console.log('Movie added successfully!', responseData);
       navigate("/adminhome");
@@ -42,76 +42,78 @@ function AddMovie() {
       console.error('Error adding movie:', error);
     }
   };
-  
 
-return (
-  <div className='add-movie'>
-  <div className="container mt-5 add-movie-container">
-    <div className="col-md-6">
-      <div className="add-movie-card">
-        <div className="add-movie-header">
-          <h2>Add Movie</h2>
-        </div>
-        <div className="add-movie-form">
-          <div className="add-movie-info">
-            <label>Title:</label>
-            <input
-              className="add-movie-input"
-              type="text"
-              name="title"
-              value={newMovie.title}
-              onChange={handleInputChange}
-            />
-            <label>Description:</label>
-            <input
-              className="add-movie-input"
-              type="text"
-              name="description"
-              value={newMovie.description}
-              onChange={handleInputChange}
-            />
-            <label>Duration:</label>
-            <input
-              className="add-movie-input"
-              type="text"
-              name="duration"
-              value={newMovie.duration}
-              onChange={handleInputChange}
-            />
-            <label>Language:</label>
-            <input
-              className="add-movie-input"
-              type="text"
-              name="language"
-              value={newMovie.language}
-              onChange={handleInputChange}
-            />
-            <label>Release Date:</label>
-            <input
-              className="add-movie-input"
-              type="date"
-              name="release_date"
-              value={newMovie.release_date}
-              onChange={handleInputChange}
-            />
-            <label>Image:</label>
-            <input
-              className="add-movie-input"
-              type="text"
-              name="image"
-              value={newMovie.image}
-              onChange={handleInputChange}
-            />
-            <button className="add-movie-button" onClick={handleAddMovie}>
-              Add Movie
-            </button>
+
+  return (
+    <div className='add-movie'>
+      <div className="container mt-5 add-movie-container">
+        <div className="col-md-6">
+          <div className="add-movie-card">
+            <div className="add-movie-header">
+              <div className="card-header">
+                <h2>Add Movie</h2>
+              </div>
+            </div>
+            <div className="add-movie-form">
+              <div className="add-movie-info">
+                <label>Title:</label>
+                <input
+                  className="add-movie-input"
+                  type="text"
+                  name="title"
+                  value={newMovie.title}
+                  onChange={handleInputChange}
+                />
+                <label>Description:</label>
+                <input
+                  className="add-movie-input"
+                  type="text"
+                  name="description"
+                  value={newMovie.description}
+                  onChange={handleInputChange}
+                />
+                <label>Duration:</label>
+                <input
+                  className="add-movie-input"
+                  type="text"
+                  name="duration"
+                  value={newMovie.duration}
+                  onChange={handleInputChange}
+                />
+                <label>Language:</label>
+                <input
+                  className="add-movie-input"
+                  type="text"
+                  name="language"
+                  value={newMovie.language}
+                  onChange={handleInputChange}
+                />
+                <label>Release Date:</label>
+                <input
+                  className="add-movie-input"
+                  type="date"
+                  name="release_date"
+                  value={newMovie.release_date}
+                  onChange={handleInputChange}
+                />
+                <label>Image:</label>
+                <input
+                  className="add-movie-input"
+                  type="text"
+                  name="image"
+                  value={newMovie.image}
+                  onChange={handleInputChange}
+                />
+                <button className="add-movie-button" onClick={handleAddMovie}>
+                  Add Movie
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</div>
-);
+  );
 }
 
 export default AddMovie;
