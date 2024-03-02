@@ -11,7 +11,7 @@ function Theaters() {
     const theatersData = [
         {
           id: 1,
-          name: 'Theater A',
+          name: 'Inox',
           screens: [
             {
               id: 101,
@@ -33,7 +33,7 @@ function Theaters() {
         },
         {
           id: 2,
-          name: 'Theater B',
+          name: 'PVR',
           screens: [
             {
               id: 201,

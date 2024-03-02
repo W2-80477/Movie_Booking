@@ -46,10 +46,10 @@ function Navbar() {
                 <Link className="nav-link active" aria-current="page" to="/signin">SignIn</Link>
               </li>
             </ul>
-            <form className="d-flex" role="search">
+            {/* <form className="d-flex" role="search">
               <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
               <button className="btn btn-outline-success" type="submit">Search</button>
-            </form>
+            </form> */}
 
             <div className='profile'>
               <ul class="navbar-nav ms-auto mb-2 mb-lg-0 profile-menu">
